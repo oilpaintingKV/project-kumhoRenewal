@@ -1,0 +1,32 @@
+/* 비주얼 영역 */
+.main{
+    overflow: hidden;
+    width: 2000px; height: 960px;
+    position: relative;
+    top: 0; left: 50%; 
+    margin-left: -1000px;
+    z-index: 50;
+}
+.main .slogan{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -600px;
+    margin-top: -100px;
+    color: #fff;
+}
+.main .slogan dt{
+    display: block;
+    font-size: 3.750em;
+    line-height: 1.5em;
+    font-weight: 700;
+}
+.main .slogan dd{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.125em;
+    margin-top: 20px;
+}
+.main .slogan dd>span{
+    color: #c01;
+    font-weight: 500;
+}

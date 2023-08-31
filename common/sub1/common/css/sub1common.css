@@ -1,0 +1,115 @@
+/* 비주얼 영역 */
+.main{
+    overflow: hidden;
+    position: relative;
+    top: 0; 
+    left: 50%; 
+    width: 2000px; 
+    height: 500px;
+    margin-left: -1000px;
+    z-index: 50;
+}
+.main h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -80px;
+    color: #fff;
+    font-size: 2.813em;
+    font-weight: 400;
+}
+
+/* 서브네비 */
+.subNav{
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+.subNav ul{
+    overflow: hidden;
+    width: 660px;
+    margin: 0 auto;   
+}
+.subNav .current{
+    color: #c01;
+    border-bottom: 2px solid #c01;
+    font-weight: 500;
+}
+.subNav li{
+    position: relative;
+    width: 33.333%;
+    float: left;
+    font-size: 1.250em;
+    text-align: center;
+}
+.subNav a{
+    transition: all .3s;
+}
+.subNav li:hover a{
+    color: #c01;
+}
+.subNav a{
+    display: block;
+    padding-top: 20px;
+    height: 70px;
+}
+.subNav li:not(:last-child)::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 26px;
+    right: 0;
+    width: 1px;
+    height: 15px;
+    background: #ccc;
+}
+.subNav li::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    height: 2px;
+    background: #c01;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: all .3s;
+}
+.subNav li:hover::after{
+    transform: scaleY(1);
+}
+
+/* 콘텐츠 영역 */
+/* 타이틀 */
+#content{
+    width: 1200px;
+    margin: 0 auto;
+}
+#content .titleArea{
+    height: 455px;
+    margin-top: 100px;
+}
+#content .titleArea .lineMap{
+    color: #999;
+}
+#content h2{
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 3.438em;
+}
+#content h2::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 100px;
+    background: #c01;
+    position: absolute;
+    left: 50%;
+    top: 120px;
+}
+
+.contentArea p{
+    font-size: 1.25em;
+    line-height: 2em;
+}

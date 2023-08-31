@@ -1,0 +1,91 @@
+/* contentArea */
+.contentArea section{
+    margin: 200px 0;
+}
+.contentArea section::after{
+    content: ''; display: block; clear: both;
+}
+.contentArea section div{
+    width: 500px;
+    position: relative;
+}
+.contentArea section div::after{
+    content: ''; 
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 700px;
+    border: 1px solid #c01;
+    border-radius: 50%;
+    z-index: -10;
+}
+.contentArea section p{
+    text-align: justify;
+    margin: 20px 0;
+}
+.contentArea section h3{
+    font-size: 2.25em;
+    font-weight: 500;
+    position: relative;
+}
+.contentArea section h3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: -20px;
+    width: 7px;
+    height: 36px;
+    background: #c01;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: all .5s;
+}
+.contentArea section:hover h3::after{
+    transform: scaleY(1);
+}
+.contentArea section img{
+    border-radius: 50%;
+}
+.contentArea section:nth-of-type(1) img{
+    float: left;
+}
+.contentArea section:nth-of-type(1) div{
+    float: right;
+}
+.contentArea section:nth-of-type(1) div::after{
+    top: 0;
+    left: -1000px;
+    animation-duration: 3s;
+    animation-name: popCircle;
+    animation-iteration-count: infinite;
+}
+
+.contentArea section:nth-of-type(2) img{
+    float: right;
+}
+.contentArea section:nth-of-type(2) div{
+    float: left;
+}
+.contentArea section:nth-of-type(2) div::after{
+    top: -10px;
+    left: 1010px;
+    width: 300px;
+    height: 300px;
+    animation-duration: 3s;
+    animation-name: popCircle;
+    animation-iteration-count: infinite;
+}
+@keyframes popCircle {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        margin-right: 0;
+        opacity: 1;
+        transform: scale(1);
+    }
+}

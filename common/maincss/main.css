@@ -1,0 +1,430 @@
+/* 비주얼 영역 */
+.main{
+    overflow: hidden;
+    width: 2000px; height: 960px;
+    position: relative;
+    top: 0; left: 50%; 
+    margin-left: -1000px;
+    z-index: 50;
+}
+.main .slogan{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -600px;
+    margin-top: -100px;
+    color: #fff;
+}
+.main .slogan dt{
+    display: block;
+    font-size: 3.750em;
+    line-height: 1.5em;
+    font-weight: 700;
+}
+.main .slogan dd{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.125em;
+    margin-top: 20px;
+}
+.main .slogan dd>span{
+    color: #c01;
+    font-weight: 500;
+}
+
+/* 본문 콘텐츠 영역 */
+#content{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* 콘텐츠 공통 */
+#content section{
+    margin-top: 100px; margin-bottom: 100px;
+}
+#content h3{
+    font-size: 3.13em; 
+    font-weight: 700;
+}
+#content h4{
+    font-size: 1.875em; 
+    font-weight: 500;
+}
+#content p{
+    color: #666;
+}
+#content .more{
+    display: block;
+    width: 180px;
+    height: 50px;
+    border: 1px solid #333;
+    transition: all .3s ease-out;
+}
+#content .more:hover{
+    border-color: #c01;
+    background: #c01;
+    color: #fff;
+}
+#content .more div{
+    text-align: center;
+    padding-top: 13px;
+}
+#content .more i{
+    margin-left: 10px;
+    transition: all .3s ease-out;
+}
+#content .more:hover i{
+    margin-left: 20px;
+    transform:rotateX(180deg)
+}
+
+/* artculture 영역 */
+#content .artculture h3{
+    margin-top: 40px;
+}
+#content .artculture h3::before{
+    content: 'ART & CULTURE DEVELOPE'; 
+    display: block;
+    font-size: 18px; 
+    font-family: 'Roboto', sans-serif;
+    color: #c01;
+}
+#content .artculture h3+p{text-align: right; margin: 25px 0 55px 0;}
+#content .artculture ul::after{
+    content: ''; display: block; clear:both;
+}
+#content .artculture li{overflow: hidden; float: left; 
+    margin-right: 75px; 
+    position: relative; 
+    border-radius: 30px; 
+    box-shadow: 10px 10px 15px  rgba(0, 0, 0, .1);
+    transition: all .5s ease-out;
+}
+#content .artculture li:hover{
+    box-shadow: 10px 10px 20px  rgba(0, 0, 0, .2);
+}
+#content .artculture li:nth-last-child(1){
+    margin-right: 0;
+}
+#content .artculture img{
+    filter: brightness(100%);
+    transform: scale(1);
+    transition: all .5s ease-out;
+}
+#content .artculture li:hover img{
+    filter: brightness(60%);
+    transform: scale(1.1) rotate(.001deg);
+}
+#content .artculture h4{
+    font-size: 1.563em;
+    margin-bottom: 20px;
+}
+#content .artculture p{
+    margin-bottom: 20px;
+}
+#content .artcultureStory{
+    width: 290px;
+    height: 155px;
+    background: url(../images/arrow.png) right bottom no-repeat;
+    position: absolute; 
+    left: 0; bottom: -100px;
+    margin-left: 30px;
+    color: #fff;
+    transition: all .5s ease-out;
+}
+#content .artculture li:hover .artcultureStory{
+    bottom: 30px;
+}
+#content .artcultureStory p{
+    color: #fff;
+    font-size: 1.125em;
+}
+
+/* support 영역 */
+#content .support{
+    height: 700px;
+    margin-top: 300px;
+}
+#content .support h3{
+    margin-top: 40px;
+}
+#content .support h3::before{
+    content: 'KUMHO SUPPORTS YOUNG'; 
+    display: block;
+    font-size: 18px; 
+    font-family: 'Roboto', sans-serif;
+    color: #c01;
+}
+#content .support h3+p{
+    margin: 50px 0;
+}
+#content .support .supportBtn{
+    overflow: hidden;
+}
+#content .support .supportBtn a{
+    width: 60px; height: 60px;
+    float: left;
+    background: #ccc;
+    color: #fff;
+    opacity: .5;
+    font-size: 2.5em;
+    padding-left: 20px;
+    transition: opacity .5s;
+}
+#content .support .supportBtn a:hover{
+    opacity: 1;
+}
+
+#content .support li[class$=Tab]{
+    height: 325px;
+    position: relative;
+    box-sizing: border-box;}
+#content .support li[class$=Tab]>img{
+    position: absolute;
+    right: 0; 
+    bottom: 0;
+    z-index: -10;
+}
+#content .support .tabBox{
+    position: relative;
+    top: 50px; left: 0;
+    height: 300px;
+    width: 800px;
+    padding: 50px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 15px  rgba(0, 0, 0, .1);
+    background: #fff url();
+    transition: all .5s ease-out;
+}
+#content .support .tabBox:hover{
+    color: #c01;
+    box-shadow: 10px 10px 15px  rgba(0, 0, 0, .2);
+}
+#content .support .tabBox img{
+    position: absolute;
+    right: 100px; top: 50px;
+    transform-origin: left;
+    transform: scale(.8);
+    opacity: 0;
+    transition: all .5s ease-out;
+}
+#content .support .tabBox:hover img{
+    transform: scale(1);
+    opacity: 1;
+}
+#content .support h4{
+    margin-bottom: 20px;
+}
+#content .support p{
+    margin-bottom: 30px;
+}
+
+/* artist 영역 */
+#content .artist{
+    width: 2000px;
+    position: relative;
+    left: 50%;
+    margin-left: -1000px;
+}
+#content .artist h3{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;;
+}
+#content .artist p{
+    text-align: center;
+}
+#content .artist ul{
+    margin-top: 130px;
+    margin-left: 200px;
+}
+#content .artist ul::after{
+    content: ''; display: block; clear:both;
+}
+#content .artist li{
+    float: left;
+    margin-right: 100px;
+}
+#content .artist img{
+    border-radius: 50%;
+    transform: scale(1);
+    filter: grayscale(.4);
+    transition: all .5s ease-out;
+}
+#content .artist li:hover img{
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
+#content .artist dl{
+    margin-top: 30px;
+    text-align: center;
+}
+#content .artist dt{
+    font-size: 1.563em;
+    margin-bottom: 20px;
+    font-weight: 400;
+    transition: all .5s ease-out;
+}
+#content .artist li:hover dt{
+    font-weight: 500;
+}
+#content .artist dd>span{
+    margin-right: 10px;
+    transition: all .3s ease-out;
+}
+#content .artist li:hover dd>span{
+    margin-right: 2px;
+    color: #c01;
+    font-weight: 700;
+}
+#content .artist>a{
+    position: absolute;
+    top: 130px; right: 400px;
+    font-size: 1.250em;
+    color: #666;
+}
+#content .artist>a i{
+    margin-left: 10px;
+    color: #c01;
+    transform: rotate(0);
+    transition: all .3s ease-out;
+}
+#content .artist>a:hover i{
+    transform: rotate(90deg);
+}
+
+/* artcenter 영역 */
+#content .artcenter{}
+#content .artcenter h3{
+    text-align: center;
+    margin-bottom: 50px;
+}
+#content .artcenter p{
+    color: #fff;
+}
+#content .artcenter ul{
+    display: flex;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 10px 10px 15px  rgba(0, 0, 0, .1);
+}
+#content .artcenter li{
+    width: 33.3333%;
+    overflow: hidden;
+    position: relative;
+    transition: all .4s;
+}
+#content .artcenter ul:hover li{
+    width: 25%
+}
+#content .artcenter ul li:hover{
+    width: 50%;
+}
+#content .artcenter .artcenterEx{
+    position: absolute;
+    top: 35%; 
+    left: 5%;
+    color: #fff;
+}
+#content .artcenter .artcenterEx>p{
+    margin: 30px 0;
+    opacity: 0;
+    transition: all .5s;
+}
+#content .artcenter ul li:hover .artcenterEx>p{
+    opacity: 1;
+}
+
+#content .artcenter img{
+    transition: all .5s;
+}
+#content .artcenter li:hover img{
+    filter: brightness(60%);
+}
+#content .artcenter ul li .more{
+    display: block;
+    width: 180px;
+    height: 50px;
+    border: 1px solid #fff;
+    color: #fff;
+    opacity: 0;
+    transition: all .3s ease-out;
+}
+#content .artcenter ul li:hover .more{
+    opacity:1;
+}
+#content .artcenter .more:hover{
+    border: 1px solid #c01;
+}
+
+/* notice 영역 */
+#content .notice{
+    width: 2000px;
+    height: 611px;
+    background: url(../images/notice.jpg);
+    position: relative;
+    top: 0; left: 50%; 
+    margin-left: -1000px;
+    margin-bottom: 0;
+}
+#content .notice h3{
+    margin-top: 100px;
+}
+#content .notice ul{
+    margin: 50px 0;
+} 
+#content .notice .noticeInner{
+    width: 1200px; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+#content .notice ul::after{
+    content: ''; display: block; clear:both;
+}
+#content .notice li>a{
+    width: 550px;
+    height: 270px;
+    margin: 0 25px;
+    box-sizing: border-box;
+    float: left;
+    border-radius: 30px;
+    background: #fff;
+    box-shadow: 10px 10px 15px  rgba(0, 0, 0, .1);
+    transition: all .5s ease-out;
+}
+#content .notice li>a:hover{
+    box-shadow: 10px 10px 15px  rgba(0, 0, 0, .3);
+}
+#content .notice dl{
+    margin: 50px;
+}
+#content .notice dt{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+#content .notice dt::after{
+    content: '';
+    display: block;
+    width: 450px;
+    height: 10px;
+    position: relative;
+    top:-10px;
+    background: rgba(0, 0, 0, .02);
+    transform-origin: top left;
+    transform: scaleX(0);
+    transition: all .5s ease-out;
+}
+#content .notice li:hover dt::after{
+    transform: scaleX(1);
+    background: rgba(0, 0, 0, .1);
+}
+#content .notice dd{
+    color: #666;
+}
+#content .notice span{
+    display: block;
+    margin-top: 40px;
+}
+#content .notice .more{
+    position: absolute;
+    top: 125px; right: 400px;
+}
